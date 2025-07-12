@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.$;
 public class Footer {
     final String phoneNumberSelector = "a[href='tel:+15088780629']";
     final String emailSelector = "a[href='mailto:sales@kupsilla.com']";
-    final String copyrightSelector = "span[id='hs_cos_wrapper_footer-module-11_'] div p";
+    final String copyrightSelector = "#hs_cos_wrapper_footer-module-11_ div p";
 
     @Step("Check the contact phone number")
     public void checkPhoneNumber(String phoneNumber) {

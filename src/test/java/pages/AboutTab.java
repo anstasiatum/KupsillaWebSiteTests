@@ -1,4 +1,4 @@
-package pages.components;
+package pages;
 
 import io.qameta.allure.Step;
 
@@ -7,10 +7,10 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 
 public class AboutTab {
-    final String articleNameSelector = "span[id='hs_cos_wrapper_dnd_area-module-2_'] h1";
-    final String successfulProjectsNumberSelector = "h1[class='chakra-text css-yizfub'] span";
-    final String peopleNumberSelector = "h1[class='chakra-text css-1xgu9r9'] span";
-    final String yearNumberSelector = "span[id='hs_cos_wrapper_widget_1738292166375_'] span";
+    final String articleNameSelector = "#hs_cos_wrapper_dnd_area-module-2_ h1";
+    final String successfulProjectsNumberSelector = ".chakra-text.css-yizfub span";
+    final String peopleNumberSelector = ".chakra-text.css-1xgu9r9 span";
+    final String yearNumberSelector = ".chakra-text.css-1hthsw4 span";
 
     @Step("Check the contact phone number")
     public void checkArticleName(String articleName) {

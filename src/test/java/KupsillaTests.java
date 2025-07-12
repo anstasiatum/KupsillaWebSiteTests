@@ -2,7 +2,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.MainPage;
-import pages.components.AboutTab;
+import pages.AboutTab;
 import pages.components.DiscussAProjectForm;
 import pages.components.Footer;
 import pages.components.HeaderMenu;
@@ -50,7 +50,7 @@ public class KupsillaTests extends TestBase {
     @Test
     @Tag("Smoke")
     @DisplayName("Checking the `About` tab contents")
-    public void partnersTabTest() {
+    public void aboutTabTest() {
         mainPage.openMainPage();
         headerMenu.checkAboutButtonIsVisible();
         headerMenu.clickOnTheAboutButton();

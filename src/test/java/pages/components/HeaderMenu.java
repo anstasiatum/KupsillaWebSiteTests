@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class HeaderMenu {
     final String kupsillaLogo = ".header__logo-image";
-    final String discussAProjectButton = "body > div:nth-child(1) > div:nth-child(1) > header:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > a:nth-child(1)";
+    final String discussAProjectButton = ".header__button-col.hidden-phone .header__button.button";
     final String aboutButton = "body > div:nth-child(1) > div:nth-child(1) > header:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > nav:nth-child(1) > ul:nth-child(1) > li:nth-child(6) > a:nth-child(1)";
 
     @Step("Check that Kupsilla logo is visible")
