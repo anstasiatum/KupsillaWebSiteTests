@@ -12,8 +12,9 @@ import static com.codeborne.selenide.Selenide.$;
 public class HeaderMenu {
     final String kupsillaLogo = ".header__logo-image";
     final String discussAProjectButton = "body > div:nth-child(1) > div:nth-child(1) > header:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > a:nth-child(1)";
+    final String aboutButton = "body > div:nth-child(1) > div:nth-child(1) > header:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > nav:nth-child(1) > ul:nth-child(1) > li:nth-child(6) > a:nth-child(1)";
 
-    @Step("Kupsilla logo is visible")
+    @Step("Check that Kupsilla logo is visible")
     public void checkLogoIsVisible() {
         $(kupsillaLogo)
                 .shouldBe(visible)
@@ -21,7 +22,7 @@ public class HeaderMenu {
                 .shouldHave(attribute("alt", "Kupsilla Logo"));
     }
 
-    @Step("`Discuss a project` button is visible")
+    @Step("Check that the `Discuss a project` button is visible")
     public void checkDiscussAProjectButtonIsVisible() {
         $(discussAProjectButton)
                 .shouldBe(clickable)
@@ -31,8 +32,19 @@ public class HeaderMenu {
 
     @Step("Click on the `Discuss a project` button")
     public void clickOnDiscussAProjectButton() {
-        $(discussAProjectButton)
-                .click();
+        $(discussAProjectButton).click();
+    }
 
+    @Step("Check that the `About` button is visible")
+    public void checkAboutButtonIsVisible() {
+        $(aboutButton)
+                .shouldBe(clickable)
+                .shouldHave(exactText("About"))
+                .shouldHave(attribute("href", "https://kupsilla.com/about"));
+    }
+
+    @Step("Click on the `About` button")
+    public void clickOnTheAboutButton() {
+        $(aboutButton).click();
     }
 }
