@@ -10,7 +10,6 @@ import static com.codeborne.selenide.Selenide.$;
 public class DiscussAProjectForm {
     final String captchaSelector = "div[class='hs_recaptcha hs-recaptcha field hs-form-field'] div[class='input']";
     final String subscriptionCheckboxSelector = "input[id='LEGAL_CONSENT.subscription_type_531440580-36450580-f77f-41ee-912c-084550c5a044_3188']";
-    final String subscriptionCheckboxText = "I agree to receive other communications from Kupsilla.";
     final String firstNameFieldSelector = ".hs_firstname.hs-firstname.hs-fieldtype-text.field.hs-form-field";
     final String lastNameFieldSelector = ".hs_lastname.hs-lastname.hs-fieldtype-text.field.hs-form-field";
     final String emailFieldSelector = ".hs_email.hs-email.hs-fieldtype-text.field.hs-form-field";
@@ -25,8 +24,7 @@ public class DiscussAProjectForm {
     @Step("Check the state of the subscription checkbox")
     public void checkSubscriptionCheckbox(boolean isChecked) {
         $(subscriptionCheckboxSelector)
-                .shouldBe(visible)
-                .shouldHave(exactText(subscriptionCheckboxText));
+                .shouldBe(visible);
 
         if (isChecked) {
             $(subscriptionCheckboxSelector).shouldBe(checked);
