@@ -124,6 +124,10 @@ smoke_test
 - Page Source
 - Browser logs
 - Video of the test run
+  
+<video width="320" height="240" autoplay muted>
+ <source src="readmemedia/ExampleRunVideo.mp4" type="video/mp4"/>
+</video>
 
 ## Notifications
 
