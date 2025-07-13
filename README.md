@@ -85,13 +85,14 @@
 ## ✅ Automated test cases
 1. Checking the Kupsilla logo
 2. Checking that the "Discuss a project" form is shown after clicking in the corresponding button
-3. Checking the contacts in the sire footer
+3. Checking the contacts in the site footer
 4. Checking the "About" tab contents
 5. Checking the Copyright Information
 
 ## ▶️ Build
 
 The build is parametrized. The tests can be run in different browsers, browser versions, resolutions as well as the Seleoid environment can also be configured. 
+
 
 ### Local build
 
@@ -125,3 +126,7 @@ smoke_test
 - Video of the test run
 
 ## Notifications
+
+After each run a notification is sent automatically to **Telegram** with a brief summary of the test results including the number of passed and failed tests, run duration, and report link. This functianlity is implemented using the [allure-notifications](https://github.com/qa-guru/allure-notifications) library which also allows sending notifications to Slack, Discord, and other messengers.
+
+//TODO: Add screenshot
