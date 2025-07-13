@@ -76,11 +76,52 @@
   </table>
 </div>
 
+- Developed using **Java 21**, **JUnit**, and **Selenide**
+- Built via **Gradle**
+- Run using **Selenoid** containers
+- Integrated build with **Jenkins**
+- Sending notifications on **Telegram**
 
-## Automated test cases
+## ✅ Automated test cases
+1. Checking the Kupsilla logo
+2. Checking that the "Discuss a project" form is shown after clicking in the corresponding button
+3. Checking the contacts in the sire footer
+4. Checking the "About" tab contents
+5. Checking the Copyright Information
 
 ## ▶️ Build
 
+The build is parametrized. The tests can be run in different browsers, browser versions, resolutions as well as the Seleoid environment can also be configured. 
+
+### Local build
+
+```bash
+gradle clean smoke_test
+```
+
+### Remote build (Jenkins)
+
+```bash
+smoke_test
+-Dbrowser=${Browser}
+-DselenoidHostName=${SelenoidHostName}
+-DselenoidLogin=${SelenoidLogin}
+-DselenoidPassword=${SelenoidPassword}
+-DbrowserVersion=${BrowserVersion}
+-DscreenResolution=${Resolution}
+```
+
 ## Allure report
+
+### Allure report page
+//TODO: Add the allure report main page image
+[Example]()
+
+### Each test in the report contains:
+- User-friedly readable test steps
+- Screenshot of the last step
+- Page Source
+- Browser logs
+- Video of the test run
 
 ## Notifications
