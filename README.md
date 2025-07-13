@@ -59,13 +59,6 @@
           <img src="readmemedia/jenkins-original.svg" width="48" height="48" alt="Jenkins" />
         </a>
         <br>Jenkins
-      </td>
-      <td align="center" width="110">
-        <a href="https://github.com/" target="_blank">
-          <img src="readmemedia/github-original-wordmark.svg" width="48" height="48" alt="GitHub" />
-        </a>
-        <br>GitHub
-      </td>
       <td align="center" width="110">
         <a href="https://web.telegram.org/" target="_blank">
           <img src="readmemedia/Telegram.svg" width="48" height="48" alt="Telegram" />
