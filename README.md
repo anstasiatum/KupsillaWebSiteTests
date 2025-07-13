@@ -7,11 +7,11 @@
 # Kupsilla web site automated tests
 
 ## 📜 Summary
-- Stack
-- Automated test cases
-- Build
-- Allure report
-- Notifications
+- [Stack](#-stack)
+- [Automated test cases](#-automated-test-cases)
+- [Build](#-build)
+- [Allure report](#-allure-report)
+- [Notifications](#-notifications)
 
   
 ## 💻 Stack
