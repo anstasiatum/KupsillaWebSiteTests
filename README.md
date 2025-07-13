@@ -80,7 +80,7 @@
 - Built via **Gradle**
 - Run using **Selenoid** containers
 - Integrated build with **Jenkins**
-- Sending notifications on **Telegram**
+- Sending notifications to **Telegram**
 
 ## ✅ Automated test cases
 1. Checking the Kupsilla logo
