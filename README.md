@@ -19,7 +19,7 @@
 <div align="center">
   <table>
     <tr>
-      <!-- Первая строка -->
+      <!-- First row -->
       <td align="center" width="110">
         <a href="https://www.java.com" target="_blank">
           <img src="readmemedia/java-original-wordmark.svg" width="48" height="48" alt="Java" />
@@ -46,7 +46,7 @@
       </td>
     </tr>
     <tr>
-      <!-- Вторая строка -->
+      <!-- Second row -->
       </td>
       <td align="center" width="110">
         <a href="https://docs.qameta.io/allure/" target="_blank">
