@@ -1,5 +1,6 @@
 package pages.components;
 
+import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Condition.attribute;
@@ -7,16 +8,17 @@ import static com.codeborne.selenide.Condition.clickable;
 import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Condition.image;
 import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 
 public class HeaderMenu {
-    final String kupsillaLogo = ".header__logo-image";
-    final String discussAProjectButton = ".header__button-col.hidden-phone .header__button.button";
-    final String aboutButton = "body > div:nth-child(1) > div:nth-child(1) > header:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > nav:nth-child(1) > ul:nth-child(1) > li:nth-child(6) > a:nth-child(1)";
+    private final SelenideElement kupsillaLogo = $(".header__logo-image");
+    private final SelenideElement discussAProjectButton = $(".header__button-col.hidden-phone .header__button.button");
+    private final SelenideElement aboutButton = $(".header__menu-col").$(byText("About"));
 
     @Step("Check that Kupsilla logo is visible")
     public void checkLogoIsVisible() {
-        $(kupsillaLogo)
+        kupsillaLogo
                 .shouldBe(visible)
                 .shouldBe(image)
                 .shouldHave(attribute("alt", "Kupsilla Logo"));
@@ -24,7 +26,7 @@ public class HeaderMenu {
 
     @Step("Check that the `Discuss a project` button is visible")
     public void checkDiscussAProjectButtonIsVisible() {
-        $(discussAProjectButton)
+        discussAProjectButton
                 .shouldBe(clickable)
                 .shouldHave(exactText("Discuss a project"))
                 .shouldHave(attribute("href", "https://kupsilla.com/#discuss-form"));
@@ -32,12 +34,12 @@ public class HeaderMenu {
 
     @Step("Click on the `Discuss a project` button")
     public void clickOnDiscussAProjectButton() {
-        $(discussAProjectButton).click();
+        discussAProjectButton.click();
     }
 
     @Step("Check that the `About` button is visible")
     public void checkAboutButtonIsVisible() {
-        $(aboutButton)
+        aboutButton
                 .shouldBe(clickable)
                 .shouldHave(exactText("About"))
                 .shouldHave(attribute("href", "https://kupsilla.com/about"));
