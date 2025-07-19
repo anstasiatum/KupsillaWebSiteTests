@@ -108,8 +108,7 @@ smoke_test
 ## <img src="readmemedia/Allure.svg" width="48" height="48" alt="Allure" /> Allure report
 
 ### Allure report page
-//TODO: Add the allure report main page image
-[Example]()
+<img src="readmemedia/JenkinsMainPage.PNG" width="600" alt="Jenkins Main Page">
 
 ### Each test in the report contains:
 - User-friedly readable test steps
@@ -124,4 +123,4 @@ smoke_test
 
 After each run a notification is sent automatically to **Telegram** with a brief summary of the test results including the number of passed and failed tests, run duration, and report link. This functianlity is implemented using the [allure-notifications](https://github.com/qa-guru/allure-notifications) library which also allows sending notifications to Slack, Discord, and other messengers.
 
-//TODO: Add screenshot
+<img src="readmemedia/TelegramNotification.PNG" width="600" alt="Telegram Notification">
